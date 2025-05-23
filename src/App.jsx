@@ -1,15 +1,11 @@
 import React, { useState, useEffect } from 'react';
-
-const CountDisplayer = ({count}) => {
-	return (
-		<div>
-			<p>Count: {count}</p>
-		</div>
-	)
-}
+import CountDisplayer from "./CountDisplayer";
+import Cookie from "./Cookie";
 
 const CookieImage = () => (
-	<img src = "https://images.ricardocuisine.com/services/recipes/1x1/443664758542a9fa22f234.jpg" width="100px" height="100px" />
+	<img src = "https://images.ricardocuisine.com/services/recipes/1x1/443664758542a9fa22f234.jpg" 
+	width="100px"
+	height="100px" />
 );
 
 const MoreCookies = () => (
@@ -18,14 +14,6 @@ const MoreCookies = () => (
 	<h1> "Don't click!"</h1>
 	</button>
 );
-const Cookie = ({onClick}) => {
-	return (
-		<button onClick={onClick}>
-			<CookieImage></CookieImage>
-			<h1> Click Me!</h1>
-		</button>
-	)
-}
 
 export default function App() {
 	const [currentCount, setCurrentCount] = useState(0);
